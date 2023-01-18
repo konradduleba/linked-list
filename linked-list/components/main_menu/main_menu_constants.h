@@ -10,6 +10,8 @@ extern const string MENU_ACTION_CREATE;
 extern const string MENU_ACTION_READ;
 extern const string MENU_ACTION_UPDATE;
 extern const string MENU_ACTION_DELETE;
+extern const string MENU_ACTION_IMPORT;
+extern const string MENU_ACTION_EXPORT;
 extern const string MENU_ACTION_CLOSE;
 
 extern const string MENU_SELECT_OPTION_MESSAGE;

@@ -11,6 +11,8 @@
 #include "validate_operation_on_linked_list.h"
 #include "no_supported_menu_action_message.h"
 #include "main_menu_constants.h"
+#include "export_linked_list.h"
+#include "import_linked_list.h"
 
 void handleSelectedMenuOption(string menuOption, node *linkedList)
 {
@@ -22,9 +24,19 @@ void handleSelectedMenuOption(string menuOption, node *linkedList)
     } else if(areStringsTheSame(menuOption, MENU_ACTION_READ)){
         displayLinkedList(linkedList);
     } else if(areStringsTheSame(menuOption, MENU_ACTION_UPDATE)){
+        displayLinkedList(linkedList);
         validateOperationOnLinkedList(linkedList, updateLinkedListValue);
+        displayLinkedList(linkedList);
     } else if(areStringsTheSame(menuOption, MENU_ACTION_DELETE)){
+        displayLinkedList(linkedList);
         validateOperationOnLinkedList(linkedList, deleteLinkedListNode);
+        displayLinkedList(linkedList);
+    } else if(areStringsTheSame(menuOption, MENU_ACTION_IMPORT)){
+        importLinkedListFromCSVFile(linkedList);
+        displayLinkedList(linkedList);
+    } else if(areStringsTheSame(menuOption, MENU_ACTION_EXPORT)){
+        displayLinkedList(linkedList);
+        validateOperationOnLinkedList(linkedList, exportLinkedListIntoCSVFile);
     } else {
         noSupportedMenuActionMessage();
     }

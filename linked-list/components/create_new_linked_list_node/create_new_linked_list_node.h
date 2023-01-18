@@ -5,6 +5,8 @@
 
 #include "node.h"
 
+void addNewValueToTheLinkedList(node *linkedList, int value);
+
 void createNewLinkedListNode(node *linkedList);
 
 #endif
