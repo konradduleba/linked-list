@@ -13,6 +13,25 @@
 #include "main_menu_constants.h"
 #include "export_linked_list.h"
 #include "import_linked_list.h"
+#include "get_string_from_user.h"
+#include "delete_range_of_linked_list.h"
+
+const string SELECT_DELETION_OPTION_MESSAGE = "Choose type of deletion (S) - Single row, (M) - Multiple rows: ";
+
+void handleDeletionOption(node *linkedList)
+{
+    string deletionOption = getStringFromUser(SELECT_DELETION_OPTION_MESSAGE);
+    
+    while(!areStringsTheSame(deletionOption, "S") && !areStringsTheSame(deletionOption, "M")){
+        deletionOption = getStringFromUser(SELECT_DELETION_OPTION_MESSAGE);
+    }
+    
+    if (areStringsTheSame(deletionOption, "S")){
+        deleteLinkedListNode(linkedList);
+    } else {
+        deleteRangeOfLinkedListNodes(linkedList);
+    }
+}
 
 void handleSelectedMenuOption(string menuOption, node *linkedList)
 {
@@ -29,7 +48,7 @@ void handleSelectedMenuOption(string menuOption, node *linkedList)
         displayLinkedList(linkedList);
     } else if(areStringsTheSame(menuOption, MENU_ACTION_DELETE)){
         displayLinkedList(linkedList);
-        validateOperationOnLinkedList(linkedList, deleteLinkedListNode);
+        validateOperationOnLinkedList(linkedList, handleDeletionOption);
         displayLinkedList(linkedList);
     } else if(areStringsTheSame(menuOption, MENU_ACTION_IMPORT)){
         importLinkedListFromCSVFile(linkedList);

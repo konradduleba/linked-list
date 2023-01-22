@@ -5,6 +5,8 @@
 
 #include "node.h"
 
+void deleteSelectedLinkedListNode(node *linkedList, int selectedIndex);
+
 void deleteLinkedListNode(node *linkedList);
 
 #endif

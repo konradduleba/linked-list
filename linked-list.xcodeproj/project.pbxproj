@@ -27,6 +27,7 @@
 		712FF5A9297580E3002C04D9 /* handle_selected_menu_option.c in Sources */ = {isa = PBXBuildFile; fileRef = 712FF5A8297580E3002C04D9 /* handle_selected_menu_option.c */; };
 		712FF5AD29787139002C04D9 /* export_linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 712FF5AC29787139002C04D9 /* export_linked_list.c */; };
 		712FF5B1297877FF002C04D9 /* import_linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 712FF5B0297877FF002C04D9 /* import_linked_list.c */; };
+		712FF5B6297DAB25002C04D9 /* delete_range_of_linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 712FF5B5297DAB25002C04D9 /* delete_range_of_linked_list.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,6 +85,8 @@
 		712FF5AC29787139002C04D9 /* export_linked_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = export_linked_list.c; sourceTree = "<group>"; };
 		712FF5AF297877FF002C04D9 /* import_linked_list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = import_linked_list.h; sourceTree = "<group>"; };
 		712FF5B0297877FF002C04D9 /* import_linked_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = import_linked_list.c; sourceTree = "<group>"; };
+		712FF5B4297DAB25002C04D9 /* delete_range_of_linked_list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = delete_range_of_linked_list.h; sourceTree = "<group>"; };
+		712FF5B5297DAB25002C04D9 /* delete_range_of_linked_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delete_range_of_linked_list.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 		712FF54C2975300C002C04D9 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				712FF5B3297DAB13002C04D9 /* delete_range_of_linked_list */,
 				712FF5AE297877F0002C04D9 /* import_linked_list */,
 				712FF5AA29787128002C04D9 /* export_linked_list */,
 				712FF59029757D71002C04D9 /* delete_linked_list_node */,
@@ -353,6 +357,15 @@
 			path = import_linked_list;
 			sourceTree = "<group>";
 		};
+		712FF5B3297DAB13002C04D9 /* delete_range_of_linked_list */ = {
+			isa = PBXGroup;
+			children = (
+				712FF5B4297DAB25002C04D9 /* delete_range_of_linked_list.h */,
+				712FF5B5297DAB25002C04D9 /* delete_range_of_linked_list.c */,
+			);
+			path = delete_range_of_linked_list;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -425,6 +438,7 @@
 				712FF57129753AA2002C04D9 /* get_int_from_user.c in Sources */,
 				712FF5B1297877FF002C04D9 /* import_linked_list.c in Sources */,
 				712FF5AD29787139002C04D9 /* export_linked_list.c in Sources */,
+				712FF5B6297DAB25002C04D9 /* delete_range_of_linked_list.c in Sources */,
 				712FF57529753B93002C04D9 /* are_strings_the_same.c in Sources */,
 				712FF59C29757EE7002C04D9 /* can_not_operate_on_empty_list_message.c in Sources */,
 				712FF5A029757F6B002C04D9 /* no_supported_menu_action_message.c in Sources */,

@@ -8,10 +8,7 @@
 
 const string SELECT_INDEX_TO_DELETE_MESSAGE = "Select index to delete: ";
 
-void deleteLinkedListNode(node *linkedList)
-{
-    int indexToDelete = getIntFromUser(SELECT_INDEX_TO_DELETE_MESSAGE);
-
+void deleteSelectedLinkedListNode(node *linkedList, int selectedIndex){
     node *previousNode = malloc(sizeof(linkedList));
 
     int i = 0;
@@ -19,13 +16,13 @@ void deleteLinkedListNode(node *linkedList)
 
     for (node *tmp = linkedList; tmp != NULL; tmp = tmp->next)
     {
-        if (indexToDelete == 0 && linkedListLength == 1)
+        if (selectedIndex == 0 && linkedListLength == 1)
         {
             linkedList->next = NULL;
             linkedList->initialized = true;
         }
 
-        if (indexToDelete == 0 && i == 1)
+        if (selectedIndex == 0 && i == 1)
         {
             linkedList->number = tmp->number;
             linkedList->next = tmp->next;
@@ -35,12 +32,12 @@ void deleteLinkedListNode(node *linkedList)
             break;
         }
 
-        if (i + 1 == indexToDelete)
+        if (i + 1 == selectedIndex)
         {
             previousNode = tmp;
         }
 
-        if (i == indexToDelete && i != 0)
+        if (i == selectedIndex && i != 0)
         {
             previousNode->next = tmp->next;
 
@@ -51,4 +48,11 @@ void deleteLinkedListNode(node *linkedList)
 
         i++;
     }
+}
+
+void deleteLinkedListNode(node *linkedList)
+{
+    int indexToDelete = getIntFromUser(SELECT_INDEX_TO_DELETE_MESSAGE);
+
+    deleteSelectedLinkedListNode(linkedList, indexToDelete);
 }
