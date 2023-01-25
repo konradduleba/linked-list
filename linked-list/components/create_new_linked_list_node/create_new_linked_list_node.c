@@ -3,13 +3,15 @@
 
 #include "create_new_linked_list_node.h"
 #include "node.h"
-#include "get_int_from_user.h"
 #include "string.h"
+#include "cs50.h"
+#include "are_strings_the_same.h"
 
 const string MEMORY_ISSUE_MESSAGE = "Memory issue. Please try again";
-const string INSERT_NUMERIC_VALUE_MESSAGE ="Insert numeric value: ";
+const string INSERT_NUMERIC_VALUE_MESSAGE = "Insert numeric value: ";
+const string INSERT_OPTION_MESSAGE = "Do you wanna insert at the beggining of the list - Ω(1) or in the end Ω(n)? B/E: ";
 
-void addNewValueToTheLinkedList(node *linkedList, int value){
+void addNewValueAtTheEndOfTheLinkedList(node *linkedList, int value){
     node *n = malloc(sizeof(linkedList));
 
     if(n == NULL)
@@ -36,9 +38,45 @@ void addNewValueToTheLinkedList(node *linkedList, int value){
     }
 }
 
+void addNewValueAtTheBeginningOfTheLinkedList(node *linkedList, int value){
+    node *n = malloc(sizeof(linkedList));
+    
+    if(n == NULL)
+    {
+        printf(MEMORY_ISSUE_MESSAGE);
+        return;
+    }
+    
+    if (linkedList->initialized){
+        linkedList->number = value;
+        linkedList->initialized = false;
+    } else {
+        n->number = linkedList->number;
+        n->next = linkedList->next;
+        
+        linkedList->number = value;
+        linkedList->next = n;
+    }
+}
+
 void createNewLinkedListNode(node *linkedList)
 {
     int userValue = getIntFromUser(INSERT_NUMERIC_VALUE_MESSAGE);
-
-    addNewValueToTheLinkedList(linkedList, userValue);
+    
+    if (linkedList->initialized){
+        addNewValueAtTheBeginningOfTheLinkedList(linkedList, userValue);
+        return;
+    }
+    
+    char insertOption = getCharFromUser(INSERT_OPTION_MESSAGE);
+    
+    while(insertOption != 'B' && insertOption != 'E'){
+        insertOption = getCharFromUser(INSERT_OPTION_MESSAGE);
+    }
+    
+    if (insertOption == 'E'){
+        addNewValueAtTheEndOfTheLinkedList(linkedList, userValue);
+    } else {
+        addNewValueAtTheBeginningOfTheLinkedList(linkedList, userValue);
+    }
 }

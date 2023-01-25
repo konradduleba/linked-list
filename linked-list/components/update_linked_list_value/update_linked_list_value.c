@@ -1,5 +1,5 @@
 #include "update_linked_list_value.h"
-#include "get_int_from_user.h"
+#include "cs50.h"
 #include "node.h"
 #include "string.h"
 

@@ -3,7 +3,7 @@
 #include "main_menu.h"
 #include "string.h"
 #include "main_menu_constants.h"
-#include "get_string_from_user.h"
+#include "cs50.h"
 #include "are_strings_the_same.h"
 #include "empty_line.h"
 
@@ -29,7 +29,6 @@ string getMenuOption(void)
     while(!isMenuOptionCorrect)
     {
         menuOption = getStringFromUser(MENU_SELECT_OPTION_MESSAGE);
-        emptyLine();
 
         for (int i = 0; i < MENU_OPTIONS_COUNT; i++)
         {

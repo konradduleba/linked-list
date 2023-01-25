@@ -3,7 +3,7 @@
 #include "delete_range_of_linked_list.h"
 #include "delete_linked_list_node.h"
 #include "node.h"
-#include "get_int_from_user.h"
+#include "cs50.h"
 #include "get_linked_list_length.h"
 #include "string.h"
 #include "empty_line.h"

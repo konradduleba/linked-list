@@ -4,7 +4,7 @@
 #include "export_linked_list.h"
 #include "node.h"
 #include "string.h"
-#include "get_string_from_user.h"
+#include "cs50.h"
 #include "empty_line.h"
 
 const string INPUT_FILE_NAME = "How do you wanna name the CSV file? ";
