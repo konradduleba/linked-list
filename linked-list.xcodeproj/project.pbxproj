@@ -27,6 +27,7 @@
 		712FF5B1297877FF002C04D9 /* import_linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 712FF5B0297877FF002C04D9 /* import_linked_list.c */; };
 		712FF5B6297DAB25002C04D9 /* delete_range_of_linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 712FF5B5297DAB25002C04D9 /* delete_range_of_linked_list.c */; };
 		712FF5BE298117AB002C04D9 /* cs50.c in Sources */ = {isa = PBXBuildFile; fileRef = 712FF5BD298117AB002C04D9 /* cs50.c */; };
+		71EE22A92981C52A00B1D72F /* find_value_in_linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 71EE22A82981C52A00B1D72F /* find_value_in_linked_list.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,6 +85,8 @@
 		712FF5B5297DAB25002C04D9 /* delete_range_of_linked_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = delete_range_of_linked_list.c; sourceTree = "<group>"; };
 		712FF5BC298117AB002C04D9 /* cs50.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cs50.h; sourceTree = "<group>"; };
 		712FF5BD298117AB002C04D9 /* cs50.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cs50.c; sourceTree = "<group>"; };
+		71EE22A72981C52A00B1D72F /* find_value_in_linked_list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = find_value_in_linked_list.h; sourceTree = "<group>"; };
+		71EE22A82981C52A00B1D72F /* find_value_in_linked_list.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = find_value_in_linked_list.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 		712FF54C2975300C002C04D9 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				71EE22A62981C51800B1D72F /* find_value_in_linked_list */,
 				712FF5B3297DAB13002C04D9 /* delete_range_of_linked_list */,
 				712FF5AE297877F0002C04D9 /* import_linked_list */,
 				712FF5AA29787128002C04D9 /* export_linked_list */,
@@ -345,6 +349,15 @@
 			path = cs50;
 			sourceTree = "<group>";
 		};
+		71EE22A62981C51800B1D72F /* find_value_in_linked_list */ = {
+			isa = PBXGroup;
+			children = (
+				71EE22A72981C52A00B1D72F /* find_value_in_linked_list.h */,
+				71EE22A82981C52A00B1D72F /* find_value_in_linked_list.c */,
+			);
+			path = find_value_in_linked_list;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -406,6 +419,7 @@
 				712FF58729757B0B002C04D9 /* display_linked_list.c in Sources */,
 				712FF59729757E48002C04D9 /* validate_operation_on_linked_list.c in Sources */,
 				712FF58B29757BE7002C04D9 /* create_new_linked_list_node.c in Sources */,
+				71EE22A92981C52A00B1D72F /* find_value_in_linked_list.c in Sources */,
 				7125C674296CB1050039DF58 /* main.c in Sources */,
 				712FF57C29753C91002C04D9 /* get_linked_list_length.c in Sources */,
 				712FF55E2975334D002C04D9 /* main_menu.c in Sources */,
