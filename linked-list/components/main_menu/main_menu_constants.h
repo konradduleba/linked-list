@@ -11,6 +11,7 @@ extern const string MENU_ACTION_READ;
 extern const string MENU_ACTION_UPDATE;
 extern const string MENU_ACTION_DELETE;
 extern const string MENU_ACTION_FIND;
+extern const string MENU_ACTION_FILTER;
 extern const string MENU_ACTION_SORT;
 extern const string MENU_ACTION_IMPORT;
 extern const string MENU_ACTION_EXPORT;
