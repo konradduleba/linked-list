@@ -16,6 +16,7 @@
 #include "cs50.h"
 #include "delete_range_of_linked_list.h"
 #include "find_value_in_linked_list.h"
+#include "sorting_linked_list.h"
 
 const string SELECT_DELETION_OPTION_MESSAGE = "Choose type of deletion (S) - Single row, (M) - Multiple rows: ";
 
@@ -54,6 +55,10 @@ void handleSelectedMenuOption(string menuOption, node *linkedList)
     } else if(areStringsTheSame(menuOption, MENU_ACTION_FIND)){
         displayLinkedList(linkedList);
         validateOperationOnLinkedList(linkedList, findValueInLinkedList);
+    } else if(areStringsTheSame(menuOption, MENU_ACTION_SORT)){
+        displayLinkedList(linkedList);
+        validateOperationOnLinkedList(linkedList, sortLinkedList);
+        displayLinkedList(linkedList);
     } else if(areStringsTheSame(menuOption, MENU_ACTION_IMPORT)){
         importLinkedListFromCSVFile(linkedList);
         displayLinkedList(linkedList);
